@@ -1,0 +1,276 @@
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+input {
+    font-size: 14px;
+}
+
+body {
+    line-height: 1.4;
+    font-family: 'Raleway';
+    color: #333333;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #777;
+}
+
+input {
+    border: 1px solid #eeeeee;
+    padding: 12px;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 12px;
+    background: #7C5CBF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: background .3s ease;
+}
+
+button:hover {
+    background: #6b47b8;
+}
+
+button:disabled {
+    cursor: default;
+    background: #7c5cbf94;
+}
+
+/* Join Page Styles */
+
+.centered-form {
+    background: #333744;
+    width: 100vw;
+    height: 100vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-form__box {
+    box-shadow: 0px 0px 17px 1px #1D1F26;
+    background: #F7F7FA;
+    padding: 24px;
+    width: 250px;
+}
+
+.centered-form button {
+    width: 100%;
+}
+
+.centered-form input {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    max-height: 8vh;
+    width: 100vw;
+    background-color: #6b47b8;
+    box-shadow: 0px 0px 10px -1px #212121;
+    display: none;
+}
+
+.header h2 {
+    color: #fff;
+    padding: 5px;
+    flex-grow: 1;
+}
+
+/* Burger Icon */
+#burger {
+    width: 30px;
+    height: 30px;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+#burger div {
+    transition: all 0.3s ease;
+    margin: 2px 0px;
+    padding: 0;
+}
+
+.line1 {
+    background-color: #fff;
+    width: 10px;
+    height: 2px;
+}
+
+.line2 {
+    background-color: #fff;
+    width: 20px;
+    height: 3px;
+}
+
+.line3 {
+    background-color: #fff;
+    width: 25px;
+    height: 2px;
+}
+
+.toggle .line1{
+    transform: rotate(45deg) translate(4px, 5px);
+    width: 15px;
+}
+.toggle .line2{
+    transform: translateX(40%);
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(-45deg) translate(4px, -5px);
+    width: 15px;
+}
+
+/* Chat Page Layout */
+
+.chat {
+    display: flex;
+}
+
+.chat__sidebar {
+    height: 100vh;
+    color: white;
+    background: #333744;
+    width: 225px;
+    overflow-y: scroll;
+}
+
+#sidebar {
+    transition: all 0.3s ease;
+}
+
+/* Chat styles */
+
+.chat__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+
+.chat__messages {
+    flex-grow: 1;
+    padding: 24px 24px 0 24px;
+    overflow-y: scroll;
+}
+
+/* Message Styles */
+
+.message {
+    margin-bottom: 16px;   
+}
+
+.message__name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.message__meta {
+    color: #777;
+    font-size: 14px;
+}
+
+.message a {
+    color: #0070CC;
+}
+
+/* Message Composition Styles */
+
+.compose {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 16px;
+    padding: 24px;
+}
+
+.compose form {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 16px;
+}
+
+.compose input {
+    border: 1px solid #eeeeee;
+    width: 100%;
+    padding: 12px;
+    margin: 0 16px 0 0;
+    flex-grow: 1;
+}
+
+.compose button {
+    font-size: 14px;
+}
+
+/* Chat Sidebar Styles */
+
+.room-title {
+    font-weight: 700;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 32px;
+    background: #2c2f3a;
+    padding: 24px;   
+}
+
+.list-title {
+    font-weight: 400;
+    font-size: 26px;
+    margin-bottom: 4px;
+    padding: 12px 24px 0 24px;
+}
+
+.users {
+    list-style-type: none;
+    font-weight: 300;
+    text-transform: capitalize;
+    padding: 12px 24px 0 24px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .chat__sidebar {
+        transform: translateX(-100%);
+        width: 0;
+    }
+    .header {
+        display: flex;
+    }
+    .chat__main {
+        max-height: 92vh;
+    }
+}
+
