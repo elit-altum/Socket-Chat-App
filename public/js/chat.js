@@ -17,6 +17,8 @@ const messageTemplate = document.querySelector('#message-template-other').innerH
 const messageTemplateMine = document.querySelector('#message-template-mine').innerHTML;
 
 const locationTemplate = document.querySelector('#location-template').innerHTML;
+const locationTemplateMine = document.querySelector('#location-template-mine').innerHTML;
+
 const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML;
 
 // Parses the attached query strings(location.search) in the page for username and room-name
@@ -90,11 +92,22 @@ socket.on('message', (message) => {
 // To display a location message sent by server
 socket.on('locationMessage', (message) => {
 
-    const html = Mustache.render(locationTemplate, {
-        username: message.username,
-        url: message.url,
-        createdAt: moment(message.createdAt).format('h:mm a')
-    });
+    if (message.id === socket.id) {
+        const html = Mustache.render(locationTemplateMine, {
+            username: message.username,
+            url: message.url,
+            createdAt: moment(message.createdAt).format('h:mm a')
+        });
+        $messages.insertAdjacentHTML('beforeend', html);
+        
+    } else {
+        const html = Mustache.render(locationTemplate, {
+            username: message.username,
+            url: message.url,
+            createdAt: moment(message.createdAt).format('h:mm a')
+        });
+        $messages.insertAdjacentHTML('beforeend', html);
+    }
 
     $messages.insertAdjacentHTML('beforeend', html);
     autoscroll();
