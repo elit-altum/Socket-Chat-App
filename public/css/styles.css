@@ -19,6 +19,7 @@ body {
     font-family: 'Raleway';
     color: #333333;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 h1 {
@@ -270,7 +271,9 @@ button:disabled {
         display: flex;
     }
     .chat__main {
-        max-height: 92vh;
+        max-height: 90vh;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 }
 
