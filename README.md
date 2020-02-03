@@ -28,7 +28,7 @@
 - You will be greeted by a welcome message and all the other members will be notified when you join.
 
 <p align="center">
-    <img src="./readme-assets/openingScreen.PNG" height="500px">
+    <img src="./readme-assets/openingScreen.PNG">
 </p>
 
 ### 2. Sending a message
@@ -37,7 +37,7 @@
 - Your message should display on the right along with your username and the time of send.
 
 <p align="center">
-    <img src="./readme-assets/mainScreen1.PNG" height="500px">
+    <img src="./readme-assets/mainScreen1.PNG">
 </p>
 
 ### 3. Sending your location
@@ -48,7 +48,7 @@
 - If not allowed, or any other network hindrance an alert box will display the error message.
 
 <p align="center">
-    <img src="./readme-assets/mainScreenLocation.PNG" height="500px">
+    <img src="./readme-assets/mainScreenLocation.PNG">
 </p>
 
 ### Extra Features :
