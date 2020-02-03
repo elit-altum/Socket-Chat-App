@@ -10,6 +10,8 @@
 
 ***A simple IRC like chat app built using sockets***
 
+### Live Demo : https://elit-verbose.herokuapp.com/
+
 ### Technology Stack:
 - Mustache
 - NodeJS
